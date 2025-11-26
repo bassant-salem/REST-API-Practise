@@ -1,4 +1,7 @@
 
+using APIproject.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace APIproject
 {
     public class Program
@@ -12,6 +15,8 @@ namespace APIproject
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.AddDbContext<APIprojectContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'APIprojectContext' not found.")));
 
             var app = builder.Build();
 
