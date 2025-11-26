@@ -13,19 +13,18 @@ Accept: application/json
 POST {{rootURL}}/api/books
 Content-Type: application/json
 {
-  "id" : 6,
   "title" : "Pride and prejudice",
   "author" : "Jane Austen",
   "yearPublished" : 1813
 }
 ###
-PUT {{rootURL}}/api/books/5
+PUT {{rootURL}}/api/books/6
 Content-Type: application/json
 {
-  "id" : 5,
-  "title" : "The Trial",
-  "author" : "Jane Austen",
-  "yearPublished" : 1925
+  "id" : 6,
+  "title" : "The Lord of the Rings",
+  "author" : "John Ronald",
+  "yearPublished" : 1954
 }
 ###
 DELETE {{rootURL}}/api/books/4
